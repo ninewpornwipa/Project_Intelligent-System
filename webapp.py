@@ -228,7 +228,6 @@ if page == "🌡️ Temperature Forecast":
 
     if os.path.exists(model_path):
         model = joblib.load(model_path)
-        st.write("✅ Model Loaded Successfully!")
     else:
         raise FileNotFoundError("Model file not found! Please check the file path.")
 
