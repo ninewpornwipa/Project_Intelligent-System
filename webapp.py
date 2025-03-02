@@ -224,13 +224,13 @@ if page == "🤖 Neural Network":
 
 
 if page == "🌡️ Temperature Forecast":
-    model_path = r"C:\Users\Asus\Desktop\Project_IS\Temperature_Forecast.pkl"
+    model_path = "Temperature_Forecast.pkl"
 
-    # 🔹 โหลดโมเดล
     if os.path.exists(model_path):
         model = joblib.load(model_path)
+        st.write("✅ Model Loaded Successfully!")
     else:
-        model = None
+        raise FileNotFoundError("Model file not found! Please check the file path.")
 
     # 🔹 โหลด MinMaxScaler
     scaler_X = MinMaxScaler()
